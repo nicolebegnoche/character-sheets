@@ -1,0 +1,231 @@
+GRID
+
+.grid-container {
+  display: grid;
+  height: 3120px;
+  width: 2363px;
+  grid-template-rows: 355px 400px 198px 163px 159px 113px 791px 778px 40px 123px;
+  grid-template-columns: 489px 277px 470px 106px 488px 310px 223px;
+}
+
+#logo {
+  grid-area: 1/1/span 1/span 1;
+}
+
+#names {
+  grid-area: 1/2/span 1/span 3;
+}
+
+#bio {
+  grid-area: 1/5/span 1/span 2;
+}
+
+#level {
+  grid-area: 1/7/span 1/span 1;
+}
+
+#ability-scores {
+  grid-area: 2/1/span 3/span 2;
+}
+
+#class-dc {
+  grid-area: 5/1/span 1/span 2;
+}
+
+#armor-class {
+  grid-area: 2/3/span 1/span 3;
+}
+
+#saving-throws {
+  grid-area: 3/3/span 3/span 3;
+}
+
+#hit-points {
+  grid-area: 2/6/span 2/span 2;
+}
+
+#perception {
+  grid-area: 4/6/span 2/span 2;
+}
+
+#speed {
+  grid-area: 6/1/span 1/span 3;
+}
+
+#melee {
+  grid-area: 7/1/span 1/span 3;
+}
+
+#ranged {
+  grid-area: 8/1/span 1/span 3;
+}
+
+#weapon-proficiencies {
+  grid-area: 9/1/span 2/span 3;
+}
+
+#skills {
+  grid-area: 6/4/span 4/span 4;
+}
+
+#languages {
+  grid-area: 10/4/span 1/span 4;
+}
+
+
+________________________________________________________________________
+
+CSS
+
+/* Dimensions and grid structure are in grid.css. */
+
+/*  Colors:
+    Dark Blue   #002664
+    Dark Red    #5e0000
+    Light Red   #98513d
+    */
+
+/* Global styles */
+* {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin:50px;
+    background-image:url("assets/images/parchment.png");
+    background-size: cover;
+}
+
+
+#logo {
+    background-image:url(assets/images/character-sheet-logo.png);
+    background-repeat: no-repeat;
+    margin-top:-20px;
+    margin-left:-25px;
+}
+
+#names, #bio {
+    margin-bottom:8px;
+    display:flex;
+    flex-flow:column nowrap;    
+}
+
+#names label {
+    font-family:title-font;
+    color: #002664;
+    font-size:175%;
+    line-height: 70%;
+    margin-bottom:-3rem;
+    position:relative;
+    top:0.8rem;
+    left:1rem;
+    z-index:100;
+}
+#names input, #bio input{
+    border:#5e0000 0.2em solid;
+    margin:0.5em 0.3em;
+    opacity:70%;
+}
+input[name*=character] {flex-grow:3.5;}
+input[name*=player] {flex-grow:1.7;}
+input[name*=experience] {flex-grow:1.1;} 
+
+#bio input {
+    flex:1;
+}
+#bio label {
+    font-family:title-font;
+    color: #002664;
+    font-size:175%;
+    line-height: 70%;
+    margin-bottom:-2rem;
+    position:relative;
+    top:0.4rem;
+    left:1rem;
+    z-index:100;
+}
+
+
+
+
+#level {background-image: url(assets/slices/level.gif);}
+#ability-scores {background-image:url(assets/slices/ability-scores.gif);}
+#class-dc {background-image:url(assets/slices/class-dc.gif);}
+#armor-class {background-image:url(assets/slices/armor-class.gif);}
+#saving-throws {background-image:url(assets/slices/saving-throws.gif);}
+#hit-points {background-image:url(assets/slices/hit-points.gif);}
+#perception {background-image:url(assets/slices/perception.gif);}
+#speed {background-image:url(assets/slices/speed.gif);}
+#melee {background-image:url(assets/slices/melee.gif);}
+#ranged {background-image:url(assets/slices/ranged.gif);}
+#weapon-proficiencies {background-image:url(assets/slices/weapon-proficiencies.gif);}
+#skills {background-image:url(assets/slices/skills.gif);}
+#languages {background-image:url(assets/slices/languages.gif);}
+
+#level,
+#ability-scores,
+#class-dc,
+#armor-class,
+#saving-throws,
+#hit-points,
+#perception,
+#speed,
+#melee,
+#ranged,
+#weapon-proficiencies,
+#skills,
+#languages {
+  opacity: 30%;
+}
+
+
+________________________________________________________________________
+
+HTML
+
+<link rel="stylesheet" href="scratch.css">
+<link rel="stylesheet" href="scratchgrid.css">
+<link rel="stylesheet" href="fonts.css">
+
+
+<div class="grid-container">
+        <div id="logo"></div>
+        <fieldset id="names">
+            <label for="character-name">Character<br />Name</label>
+            <input name="character-name" />
+            <label for="player-name">Player<br/>Name</label>
+            <input name="player-name" />
+            <label for="experience">Experience<br/>Points (XP)</label>
+           <input name="experience" />
+        </fieldset>
+
+        <fieldset id="bio">
+            <label for="ancestry">ancestry</label><input name="ancestry" />
+            <label for="background">background</label><input name="background" />
+            <label for="class">class</label><input name="class" />
+        </fieldset>
+        
+        
+        <fieldset id="level">
+            <label for="level">level</label>
+            <input name="level" type="number" />
+            <label for="hero-points">Hero Points</label>
+            <input name="hero-points" type="number" />
+        </fieldset>
+
+
+        <fieldset id="ability-scores"></fieldset>
+        <fieldset id="class-dc"></fieldset>
+        <fieldset id="armor-class"></fieldset>
+        <fieldset id="saving-throws"></fieldset>
+        <fieldset id="hit-points"></fieldset>
+        <fieldset id="perception"></fieldset>
+        <fieldset id="speed"></fieldset>
+        <fieldset id="melee"></fieldset>
+        <fieldset id="ranged"></fieldset>
+        <fieldset id="skills"></fieldset>
+        <fieldset id="weapon-proficiencies"></fieldset>
+        <fieldset id="languages"></fieldset>
+</div> 
