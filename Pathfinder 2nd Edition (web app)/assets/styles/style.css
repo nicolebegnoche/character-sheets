@@ -1,0 +1,28 @@
+/* Dimensions, grid, flexbox, margins, and padding are in position.css. */
+/* Fonts declarations are in font.css */
+
+/*  Colors:
+    Dark Blue   #002664
+    Dark Red    #5e0000
+    Light Red   #98513d
+    */
+
+/* Global styles */
+* {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+#sheet-boundaries {
+    background-image:url("../images/charsheet-translucent.png");
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+body {
+    background-image: url("../images/parchment.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin:20px;
+}
