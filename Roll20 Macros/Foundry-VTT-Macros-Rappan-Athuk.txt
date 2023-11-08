@@ -1,0 +1,38 @@
+let targets = ["Beren", "Gideon", "Gaeleath", "Guy", "Glenhart"];
+
+r = new Roll("1d" + targets.length);
+r.evaluate();
+
+output = "Choosing a victim at random...";
+output += "<br>Looks like it's <b>" + targets[r.total-1] + "'s </b>unlucky day...";
+
+output += "<br><br><i>";
+output += "(rolled " + r.result + " on " + r.formula + " ";
+output += "using array [" + targets + "].)<i>";
+
+ChatMessage.create({
+content: output
+});
+
+
+
+
+
+
+var name = "Beren";
+var thac0 = 19;
+var bonus = 2;
+
+
+r = new Roll("1d20");
+r.evaluate();
+
+var roll = parseInt(r.result) + bonus;
+ac = thac0 - roll;
+
+output = name + " attacks, hitting AC " + ac +"!<br><br>";
+output += "<small>(Rolled " + r.result + " + " + bonus + ", THAC0: " + thac0 + ")</small>";
+
+ChatMessage.create({
+content: output
+});
