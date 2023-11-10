@@ -1,3 +1,7 @@
+Pathfinder 2e
+
+// TREAT WOUNDS
+
 ?{Choose a DC for Treat Wounds
 |
 DC 15 - Trained,

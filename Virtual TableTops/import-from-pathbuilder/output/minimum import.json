@@ -1,0 +1,15 @@
+{
+    "schema_version": 3,
+    "type": "character",
+    "character": {
+        "name": "",
+        "avatar": "",
+        "tags": "[]",
+        "controlledby": "",
+        "inplayerjournals": "",
+
+        
+        "attribs": [],
+        "abilities": []
+    }
+}
