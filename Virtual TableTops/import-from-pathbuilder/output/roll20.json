@@ -1,0 +1,56 @@
+{
+    "schema_version": 3,
+    "type": "character",
+    "character": {
+        "name": "",
+        "avatar": "",
+        "tags": "[]",
+        "controlledby": "",
+        "inplayerjournals": "",
+        "attribs": [
+            {
+                "name": "query_roll_critical_damage_dice",
+                "current": "0",
+                "max": "",
+                "id": ""
+            },
+            {
+                "name": "query_roll_damage_dice",
+                "current": "0",
+                "max": "",
+                "id": ""
+            },
+            {
+                "name": "alchemy_toggle",
+                "current": "0",
+                "max": "",
+                "id": ""
+            },
+            {
+                "name": "alchemy_toggle_infused",
+                "current": "0",
+                "max": "",
+                "id": ""
+            },
+            {
+                "name": "alchemy_toggle_research_field",
+                "current": "0",
+                "max": "",
+                "id": ""
+            },
+            {
+                "name": "roll_option_critical_damage",
+                "current": "none",
+                "max": "",
+                "id": ""
+            },
+            {
+                "name": "roll_show_notes",
+                "current": "[[1]]",
+                "max": "",
+                "id": ""
+            }
+        ],
+        "abilities": []
+    }
+}
