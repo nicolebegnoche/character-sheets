@@ -6,6 +6,10 @@ Developing a script to parse a json export from [Pathbuilder](https://pathbuilde
 🗸 &nbsp; imports basic text fields <sub>(name, ancestry, deity, class, background, size, alignment, level, languages, age, gender)</sub>
 
 ---
+#### unexpected to-do:  
+- [ ] write script to combine data from stat block export and json export [(details)](input/export_from_pathbuilder/readme.md)
+
+---
 
 #### To do - requires coordinating and calculating multiple fields:
 - [ ] ability scores

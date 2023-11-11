@@ -1,0 +1,572 @@
+{
+    "success": true,
+    "build": {
+        "name": "Edeladara (Dara)",
+        "class": "Investigator",
+        "dualClass": null,
+        "level": 5,
+        "ancestry": "Elf",
+        "heritage": "Woodland Elf",
+        "background": "Guerrilla",
+        "alignment": "LG",
+        "gender": "female",
+        "age": "120",
+        "deity": "Yuelral",
+        "size": 2,
+        "sizeName": "Medium",
+        "keyability": "int",
+        "languages": [
+            "Common",
+            "Elven",
+            "Kitsune",
+            "Pathbuilder Custom Dialect 0",
+            "Sylvan"
+        ],
+        "rituals": [],
+        "resistances": [],
+        "attributes": {
+            "ancestryhp": 6,
+            "classhp": 8,
+            "bonushp": 0,
+            "bonushpPerLevel": 0,
+            "speed": 30,
+            "speedBonus": 5
+        },
+        "abilities": {
+            "str": 10,
+            "dex": 18,
+            "con": 12,
+            "int": 19,
+            "wis": 16,
+            "cha": 10,
+            "breakdown": {
+                "ancestryFree": [
+                    "Wis"
+                ],
+                "ancestryBoosts": [
+                    "Dex",
+                    "Int"
+                ],
+                "ancestryFlaws": [
+                    "Con"
+                ],
+                "backgroundBoosts": [
+                    "Dex",
+                    "Int"
+                ],
+                "classBoosts": [
+                    "Int"
+                ],
+                "mapLevelledBoosts": {
+                    "1": [
+                        "Con",
+                        "Dex",
+                        "Int",
+                        "Wis"
+                    ],
+                    "5": [
+                        "Con",
+                        "Wis",
+                        "Dex",
+                        "Int"
+                    ]
+                }
+            }
+        },
+        "proficiencies": {
+            "classDC": 2,
+            "perception": 4,
+            "fortitude": 2,
+            "reflex": 4,
+            "will": 4,
+            "heavy": 0,
+            "medium": 0,
+            "light": 2,
+            "unarmored": 2,
+            "advanced": 0,
+            "martial": 4,
+            "simple": 4,
+            "unarmed": 4,
+            "castingArcane": 2,
+            "castingDivine": 0,
+            "castingOccult": 0,
+            "castingPrimal": 0,
+            "acrobatics": 2,
+            "arcana": 2,
+            "athletics": 2,
+            "crafting": 2,
+            "deception": 4,
+            "diplomacy": 2,
+            "intimidation": 0,
+            "medicine": 2,
+            "nature": 2,
+            "occultism": 2,
+            "performance": 0,
+            "religion": 0,
+            "society": 4,
+            "stealth": 2,
+            "survival": 4,
+            "thievery": 2
+        },
+        "mods": {},
+        "feats": [
+            [
+                "Terrain Stalker",
+                "Terrain Stalker",
+                "Awarded Feat",
+                1
+            ],
+            [
+                "Alchemical Crafting",
+                null,
+                "Awarded Feat",
+                1
+            ],
+            [
+                "Experienced Tracker",
+                null,
+                "Awarded Feat",
+                4
+            ],
+            [
+                "Cascade Bearer",
+                null,
+                "General Feat",
+                1
+            ],
+            [
+                "Woodland Elf",
+                null,
+                "Heritage",
+                1
+            ],
+            [
+                "Additional Lore",
+                null,
+                "General Feat",
+                1
+            ],
+            [
+                "Known Weaknesses",
+                null,
+                "Class Feat",
+                1
+            ],
+            [
+                "Elven Weapon Familiarity",
+                null,
+                "Ancestry Feat",
+                1
+            ],
+            [
+                "Arcane Sense",
+                null,
+                "Skill Feat",
+                2
+            ],
+            [
+                "Rain-Scribe",
+                null,
+                "General Feat",
+                2
+            ],
+            [
+                "Forager",
+                null,
+                "General Feat",
+                2
+            ],
+            [
+                "Eyes of the City",
+                null,
+                "General Feat",
+                2
+            ],
+            [
+                "Underworld Investigator",
+                null,
+                "Class Feat",
+                2
+            ],
+            [
+                "Wizard Dedication",
+                null,
+                "Archetype Feat",
+                2
+            ],
+            [
+                "Shared Stratagem",
+                null,
+                "Class Feat",
+                3
+            ],
+            [
+                "Streetwise",
+                null,
+                "General Feat",
+                3
+            ],
+            [
+                "Glean Contents",
+                null,
+                "Skill Feat",
+                3
+            ],
+            [
+                "Thorough Search",
+                null,
+                "General Feat",
+                4
+            ],
+            [
+                "Ambush Tactics",
+                null,
+                "Skill Feat",
+                4
+            ],
+            [
+                "Lie to Me",
+                null,
+                "General Feat",
+                4
+            ],
+            [
+                "Detective Dedication",
+                null,
+                "Class Feat",
+                4
+            ],
+            [
+                "Basic Arcana",
+                null,
+                "Archetype Feat",
+                4
+            ],
+            [
+                "Familiar",
+                null,
+                "Wizard Feat",
+                4
+            ],
+            [
+                "Criminal Connections",
+                null,
+                "General Feat",
+                5
+            ],
+            [
+                "Quick Identification",
+                null,
+                "Skill Feat",
+                5
+            ],
+            [
+                "Nimble Elf",
+                null,
+                "Ancestry Feat",
+                5
+            ]
+        ],
+        "specials": [
+            "Pursue a Lead",
+            "Alchemical Sciences Methodology",
+            "Quick Tincture",
+            "Low-Light Vision",
+            "Strategic Strike",
+            "On the Case",
+            "Clue In",
+            "Devise a Stratagem",
+            "Universalist",
+            "Arcane School",
+            "Skillful Lessons",
+            "Keen Recollection",
+            "Weapon Expertise",
+            "Woodland Elf"
+        ],
+        "lores": [
+            [
+                "Underworld",
+                2
+            ],
+            [
+                "Forest",
+                2
+            ],
+            [
+                "Nantambu",
+                4
+            ]
+        ],
+        "equipmentContainers": {
+            "eaaa9e35-2acd-44c5-bdd7-ac4ef5713bf1": {
+                "containerName": "Backpack",
+                "bagOfHolding": false,
+                "backpack": true
+            },
+            "d8ae52f1-bd1e-4a9b-b7cb-a0e32e418a91": {
+                "containerName": "Dorm Room",
+                "bagOfHolding": true,
+                "backpack": false
+            }
+        },
+        "equipment": [
+            [
+                "Cold Iron Chunk",
+                1,
+                "Invested"
+            ],
+            [
+                "Backpack",
+                1,
+                "Invested"
+            ],
+            [
+                "Bedroll",
+                1,
+                "eaaa9e35-2acd-44c5-bdd7-ac4ef5713bf1",
+                "Invested"
+            ],
+            [
+                "Chalk",
+                10,
+                "eaaa9e35-2acd-44c5-bdd7-ac4ef5713bf1",
+                "Invested"
+            ],
+            [
+                "Flint and Steel",
+                1,
+                "eaaa9e35-2acd-44c5-bdd7-ac4ef5713bf1",
+                "Invested"
+            ],
+            [
+                "Rope",
+                1,
+                "eaaa9e35-2acd-44c5-bdd7-ac4ef5713bf1",
+                "Invested"
+            ],
+            [
+                "Rations",
+                2,
+                "eaaa9e35-2acd-44c5-bdd7-ac4ef5713bf1",
+                "Invested"
+            ],
+            [
+                "Torch",
+                5,
+                "eaaa9e35-2acd-44c5-bdd7-ac4ef5713bf1",
+                "Invested"
+            ],
+            [
+                "Waterskin",
+                1,
+                "eaaa9e35-2acd-44c5-bdd7-ac4ef5713bf1",
+                "Invested"
+            ],
+            [
+                "Soap",
+                1,
+                "eaaa9e35-2acd-44c5-bdd7-ac4ef5713bf1",
+                "Invested"
+            ],
+            [
+                "Alchemist's Lab",
+                1,
+                "d8ae52f1-bd1e-4a9b-b7cb-a0e32e418a91",
+                "Invested"
+            ],
+            [
+                "Alchemist's Tools",
+                1,
+                "Invested"
+            ],
+            [
+                "Artisan's Tools",
+                1,
+                "d8ae52f1-bd1e-4a9b-b7cb-a0e32e418a91",
+                "Invested"
+            ],
+            [
+                "Basic Crafter's Book",
+                1,
+                "Invested"
+            ]
+        ],
+        "specificProficiencies": {
+            "trained": [],
+            "expert": [],
+            "master": [],
+            "legendary": []
+        },
+        "weapons": [
+            {
+                "name": "Rapier",
+                "qty": 1,
+                "prof": "martial",
+                "die": "d6",
+                "pot": 1,
+                "str": "striking",
+                "mat": null,
+                "display": "+1 Striking Rapier",
+                "runes": [],
+                "damageType": "P",
+                "attack": 14,
+                "damageBonus": 0,
+                "extraDamage": [
+                    "2d6 precision"
+                ]
+            },
+            {
+                "name": "Shortbow",
+                "qty": 1,
+                "prof": "martial",
+                "die": "d6",
+                "pot": 1,
+                "str": "striking",
+                "mat": null,
+                "display": "+1 Striking Justice",
+                "runes": [],
+                "damageType": "P",
+                "attack": 14,
+                "damageBonus": 0,
+                "extraDamage": [
+                    "1d4 Good",
+                    "2d6 precision"
+                ]
+            }
+        ],
+        "money": {
+            "cp": 0,
+            "sp": 0,
+            "gp": 3,
+            "pp": 0
+        },
+        "armor": [
+            {
+                "name": "Leaf Weave",
+                "qty": 1,
+                "prof": "light",
+                "pot": 0,
+                "res": "",
+                "mat": null,
+                "display": "Leaf Weave",
+                "worn": true,
+                "runes": []
+            }
+        ],
+        "spellCasters": [
+            {
+                "name": "Caster Arcane Sense",
+                "magicTradition": "arcane",
+                "spellcastingType": "prepared",
+                "ability": "cha",
+                "proficiency": 2,
+                "focusPoints": 0,
+                "innate": true,
+                "perDay": [
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "spells": [
+                    {
+                        "spellLevel": 0,
+                        "list": [
+                            "Detect Magic"
+                        ]
+                    }
+                ],
+                "prepared": [],
+                "blendedSpells": []
+            },
+            {
+                "name": "Archetype Wizard",
+                "magicTradition": "arcane",
+                "spellcastingType": "prepared",
+                "ability": "int",
+                "proficiency": 2,
+                "focusPoints": 0,
+                "innate": false,
+                "perDay": [
+                    2,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "spells": [
+                    {
+                        "spellLevel": 0,
+                        "list": [
+                            "Ancient Dust",
+                            "Approximate",
+                            "Bullhorn",
+                            "Acid Splash"
+                        ]
+                    }
+                ],
+                "prepared": [
+                    {
+                        "spellLevel": 0,
+                        "list": [
+                            "Acid Splash",
+                            "Ancient Dust"
+                        ]
+                    }
+                ],
+                "blendedSpells": []
+            }
+        ],
+        "focusPoints": 0,
+        "focus": {},
+        "formula": [
+            {
+                "type": "Alchemical Sciences",
+                "known": [
+                    "Antidote (Lesser)",
+                    "Bookthief Brew",
+                    "Frost Vial (Lesser)"
+                ]
+            },
+            {
+                "type": "other",
+                "known": [
+                    "Silencer"
+                ]
+            }
+        ],
+        "acTotal": {
+            "acProfBonus": 7,
+            "acAbilityBonus": 4,
+            "acItemBonus": 1,
+            "acTotal": 22,
+            "shieldBonus": null
+        },
+        "pets": [],
+        "familiars": [
+            {
+                "type": "Familiar",
+                "name": "Familiar (myFamiliar)",
+                "equipment": [],
+                "specific": null,
+                "abilities": [
+                    "Independent",
+                    "Restorative Familiar"
+                ]
+            }
+        ]
+    }
+}
