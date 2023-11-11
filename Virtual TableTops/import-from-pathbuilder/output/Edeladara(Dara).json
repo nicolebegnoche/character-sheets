@@ -1,0 +1,122 @@
+{
+    "schema_version": 3,
+    "type": "character",
+    "character": {
+        "name": "Edeladara (Dara)",
+        "avatar": "",
+        "tags": "[]",
+        "controlledby": "",
+        "inplayerjournals": "",
+        "attribs": [
+            {
+                "name": "ancestry_heritage",
+                "current": "Woodland Elf",
+                "id": "",
+                "max": ""
+            },
+            {
+                "name": "deity",
+                "current": "Yuelral",
+                "id": "",
+                "max": ""
+            },
+            {
+                "name": "class",
+                "current": "Investigator",
+                "id": "",
+                "max": ""
+            },
+            {
+                "name": "background",
+                "current": "Guerrilla",
+                "id": "",
+                "max": ""
+            },
+            {
+                "name": "size",
+                "current": "Medium",
+                "id": "",
+                "max": ""
+            },
+            {
+                "name": "alignment",
+                "current": "LG",
+                "id": "",
+                "max": ""
+            },
+            {
+                "name": "level",
+                "current": 5,
+                "id": "",
+                "max": ""
+            },
+            {
+                "name": "languages",
+                "current": [
+                    "Common",
+                    "Elven",
+                    "Kitsune",
+                    "Pathbuilder Custom Dialect 0",
+                    "Sylvan"
+                ],
+                "id": "",
+                "max": ""
+            },
+            {
+                "name": "age",
+                "current": "120",
+                "id": "",
+                "max": ""
+            },
+            {
+                "name": "gender_pronouns",
+                "current": "female",
+                "id": "",
+                "max": ""
+            },
+            {
+                "name": "query_roll_critical_damage_dice",
+                "current": 0,
+                "id": "",
+                "max": ""
+            },
+            {
+                "name": "query_roll_damage_dice",
+                "current": 0,
+                "id": "",
+                "max": ""
+            },
+            {
+                "name": "alchemy_toggle",
+                "current": 0,
+                "id": "",
+                "max": ""
+            },
+            {
+                "name": "alchemy_toggle_infused",
+                "current": 0,
+                "id": "",
+                "max": ""
+            },
+            {
+                "name": "alchemy_toggle_research_field",
+                "current": 0,
+                "id": "",
+                "max": ""
+            },
+            {
+                "name": "roll_option_critical_damage",
+                "current": null,
+                "id": "",
+                "max": ""
+            },
+            {
+                "name": "roll_show_notes",
+                "current": "[[1]]",
+                "id": "",
+                "max": ""
+            }
+        ],
+        "abilities": []
+    }
+}
