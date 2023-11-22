@@ -1,0 +1,182 @@
+{
+    "schema_version": 3,
+    "type": "character",
+    "character": {
+        "name": "Edeladara (Dara)",
+        "avatar": "",
+        "tags": "[]",
+        "controlledby": "",
+        "inplayerjournals": "",
+        "attribs": [
+            {
+                "name": "age",
+                "current": "120",
+                "max": "",
+                "id": ""
+            },
+            {
+                "name": "alignment",
+                "current": "LG",
+                "max": "",
+                "id": ""
+            },
+            {
+                "name": "ancestry_heritage",
+                "current": "Woodland Elf",
+                "max": "",
+                "id": ""
+            },
+            {
+                "name": "background",
+                "current": "Guerrilla",
+                "max": "",
+                "id": ""
+            },
+            {
+                "name": "class",
+                "current": "Investigator",
+                "max": "",
+                "id": ""
+            },
+            {
+                "name": "deity",
+                "current": "Yuelral",
+                "max": "",
+                "id": ""
+            },
+            {
+                "name": "gender_pronouns",
+                "current": "female",
+                "max": "",
+                "id": ""
+            },
+            {
+                "name": "languages",
+                "current": "Common, Elven, Kitsune, Pathbuilder Custom Dialect 0, Sylvan",
+                "max": "",
+                "id": ""
+            },
+            {
+                "name": "level",
+                "current": 5,
+                "max": "",
+                "id": ""
+            },
+            {
+                "name": "size",
+                "current": "Medium",
+                "max": "",
+                "id": ""
+            },
+            {
+                "name": "strength",
+                "current": 10,
+                "max": "",
+                "id": ""
+            },
+            {
+                "name": "strength_score",
+                "current": 10,
+                "max": "",
+                "id": ""
+            },
+            {
+                "name": "strength_modifier",
+                "current": 0,
+                "max": "",
+                "id": ""
+            },
+            {
+                "name": "dexterity",
+                "current": 18,
+                "max": "",
+                "id": ""
+            },
+            {
+                "name": "dexterity_score",
+                "current": 18,
+                "max": "",
+                "id": ""
+            },
+            {
+                "name": "dexterity_modifier",
+                "current": 4,
+                "max": "",
+                "id": ""
+            },
+            {
+                "name": "constitution",
+                "current": 12,
+                "max": "",
+                "id": ""
+            },
+            {
+                "name": "constitution_score",
+                "current": 12,
+                "max": "",
+                "id": ""
+            },
+            {
+                "name": "constitution_modifier",
+                "current": 1,
+                "max": "",
+                "id": ""
+            },
+            {
+                "name": "intelligence",
+                "current": 19,
+                "max": "",
+                "id": ""
+            },
+            {
+                "name": "intelligence_score",
+                "current": 19,
+                "max": "",
+                "id": ""
+            },
+            {
+                "name": "intelligence_modifier",
+                "current": 4,
+                "max": "",
+                "id": ""
+            },
+            {
+                "name": "wisdom",
+                "current": 16,
+                "max": "",
+                "id": ""
+            },
+            {
+                "name": "wisdom_score",
+                "current": 16,
+                "max": "",
+                "id": ""
+            },
+            {
+                "name": "wisdom_modifier",
+                "current": 3,
+                "max": "",
+                "id": ""
+            },
+            {
+                "name": "charisma",
+                "current": 10,
+                "max": "",
+                "id": ""
+            },
+            {
+                "name": "charisma_score",
+                "current": 10,
+                "max": "",
+                "id": ""
+            },
+            {
+                "name": "charisma_modifier",
+                "current": 0,
+                "max": "",
+                "id": ""
+            }
+        ],
+        "abilities": []
+    }
+}

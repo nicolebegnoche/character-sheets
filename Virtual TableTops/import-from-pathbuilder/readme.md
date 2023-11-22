@@ -4,6 +4,7 @@ Developing a script to parse a json export from [Pathbuilder](https://pathbuilde
 🗸 &nbsp; Creates a file with the bare minimum information needed for import  
 🗸 &nbsp; imports certain settings  
 🗸 &nbsp; imports basic text fields <sub>(name, ancestry, deity, class, background, size, alignment, level, languages, age, gender)</sub>
+🗸 &nbsp; imports ability scores
 
 ---
 #### unexpected to-do:  
@@ -12,7 +13,6 @@ Developing a script to parse a json export from [Pathbuilder](https://pathbuilde
 ---
 
 #### To do - requires coordinating and calculating multiple fields:
-- [ ] ability scores
 - [ ] class dc
 - [ ] speed
 - [ ] weapon proficiencies

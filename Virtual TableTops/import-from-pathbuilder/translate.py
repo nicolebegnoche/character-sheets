@@ -1,31 +1,34 @@
-import os
 import json
+import os
 
-input_type = "Pathbuilder"
-input_file = os.path.join("input", "pathbuilder_export.json")
-output_folder = "output"
+input_file = os.path.join("exports", "pathbuilder_export.json")
+output_folder = "script_output"
 
-sheet_options = {
-    "query_roll_critical_damage_dice":  0,
-    "query_roll_damage_dice":           0,
-    "alchemy_toggle":                   0,
-    "alchemy_toggle_infused":           0,
-    "alchemy_toggle_research_field":    0,
-    "roll_option_critical_damage":      None,
-    "roll_show_notes":                  "[[1]]",
-}
 
 class Character:
+    def __init__(self, name):
+        self.name = name
+        self.attribs = []
+        self.abilities = []
+
     def __repr__(self):
-        out = [f"{x}: {y}" for x, y in vars(self).items()]
-        return "\n".join(out)
+        padding = 15
+        string = self.name + "\n"
+        for key in self.attribs:
+            string += str(key.get("name") + ":").ljust(padding)
+            string += str(key.get("current")) + "\n"
+
+        for key in self.abilities:
+            string += str(key.get("name") + ":").ljust(padding)
+            string += str(key.get("current")) + "\n"
+
+        return string
+
+    def add_attribute(self, key, value):
+        self.attribs.append({"name": key, "current": value, "max": "", "id": ""})
 
     def export(self):
-        # this code is specific to roll20
-        if self.ancestry not in self.heritage:
-            self.heritage += " " + self.ancestry
-
-        data = {
+        export = {
             "schema_version": 3,
             "type": "character",
             "character": {
@@ -34,53 +37,87 @@ class Character:
                 "tags": "[]",
                 "controlledby": "",
                 "inplayerjournals": "",
-                "attribs": [],
-                "abilities": [],
+                "attribs": self.attribs,
+                "abilities": self.abilities,
             },
         }
-        keys_to_add = {
-            "ancestry_heritage":    self.heritage,
-            "deity":                self.deity,
-            "class":                self.class_,
-            "background":           self.background,
-            "size":                 self.size,
-            "alignment":            self.alignment,
-            "level":                self.level,
-            "languages":            self.languages,
-            "age":                  self.age,
-            "gender_pronouns":      self.gender,
-        }
-        keys_to_add.update(sheet_options)
 
-        # roll20 import needs every key to be in this format 
-        for k,v in keys_to_add.items():
-            key = {"name":k,"current":v,"id":"","max":""}
-            data['character']['attribs'].append(key)
-
-        write_to_json(data)
-
+        write_to_json(export)
 
 
 def import_pathbuilder(data):
     d = data["build"]
-    x = Character()
-    x.name = d["name"]
-    x.ancestry = d["ancestry"]
-    x.heritage = d["heritage"]
-    x.deity = d["deity"]
-    x.class_ = d["class"]
-    x.background = d["background"]
-    x.size = d["sizeName"]
-    x.alignment = d["alignment"]
-    x.level = d["level"]
-    x.languages = d["languages"]
-    x.age = d["age"]
-    x.gender = d["gender"]
-    return x
+    c = Character(d["name"])
+
+    # combine ancestry with heritage without duplicating or omitting race
+    heritage = modify_heritage(d["ancestry"], d["heritage"])
+
+    keys = [
+        ["age", d["age"]],
+        ["alignment", d["alignment"]],
+        ["ancestry_heritage", heritage],
+        ["background", d["background"]],
+        ["class", d["class"]],
+        ["deity", d["deity"]],
+        ["gender_pronouns", d["gender"]],
+        ["languages", ", ".join(d["languages"])],
+        ["level", d["level"]],
+        ["size", d["sizeName"]],
+    ]
+
+    # pathbuilder exports style: ['abilities']['str'] = 20
+    # roll20 imports
+    #       strength = 20
+    #       strength_score = "20"
+    #       strength_modifier = 5
+
+    # this key is also present but doesn't appear to be necessary
+    #       strength_ability_check_modifier = ""
+
+    abilities = [
+        "strength",
+        "dexterity",
+        "constitution",
+        "intelligence",
+        "wisdom",
+        "charisma",
+    ]
+
+    for ability in abilities:
+        abbr = ability[:3]
+        score = d["abilities"][abbr]
+        mod = (score - 10) // 2
+
+        # I have triple-checked and yes, it really does require all three
+        keys.append([ability, score])
+        keys.append([ability + "_score", score])
+        keys.append([ability + "_modifier", mod])
+
+    for k, v in keys:
+        c.add_attribute(k, v)
+
+    return c
+
+
+def modify_heritage(ancestry, heritage):
+    # Half-Elves and Half-Orc humans won't append "Human" but a Half-Orc Elf will
+    if "Half-" in heritage and ancestry == "Human":
+        return heritage
+
+    # "Skilled Heritage" becomes simply "Skilled"  (Human is added in next step)
+    if "Heritage" in heritage:
+        heritage = heritage.replace("Heritage", "").strip()
+
+    # "Ancient-Blooded" + "Dwarf" becomes "Ancient-Blooded Dwarf"
+    # but "Ancient Elf" + "Elf" does NOT become "Ancient Elf Elf" :)
+    if ancestry not in heritage:
+        heritage += " " + ancestry
+
+    return heritage
 
 
 def write_to_json(data):
-    name = data['character']['name']
+    name = data["character"]["name"]
     filename = name.replace(" ", "") + ".json"
     output_file = os.path.join(output_folder, filename)
 
@@ -88,11 +125,10 @@ def write_to_json(data):
         if not os.path.exists(output_folder):
             os.makedirs(output_folder)
         json.dump(data, open(output_file, "w"), indent=4)
-    
+
     except Exception as e:
         print("Exception occured while saving file: ", e)
-        quit() 
-    
+        quit()
 
 
 if __name__ == "__main__":
@@ -105,4 +141,5 @@ if __name__ == "__main__":
         quit()
 
     character.export()
+
     print("\nProgram Finished.")
