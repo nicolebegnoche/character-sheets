@@ -57,7 +57,7 @@ def main():
     character.add(heritage())
 
     character.add(ability_scores())
-    # character.add(hit_points())
+    character.add(hit_points())
     # character.add(armor_class())
     # character.add(saving_throws())
     # character.add(skills())
@@ -133,6 +133,26 @@ def ability_scores():
     return keys
 
 
+def hit_points():
+    # TODO:  compare total_hp against value in stat_block.html
+    # TODO:  find the pathbuilder keys that correspond with:    hit_points_item,  hit_points_other
+
+
+    level = data['level']
+    class_ = data['attributes']['classhp']
+    con = (data['abilities']['con'] - 10) // 2
+    bonus = data['attributes']['bonushpPerLevel']
+    race = data['attributes']['ancestryhp']
+    total_hp = level * (class_ + con + bonus) + race
+
+    return [
+        ["hit_points", total_hp],
+        ["hit_points_ancestry", race],
+        ["hit_points_class", class_],
+        ]    
+
+
+
 def read_json(file):
     if not os.path.exists(file):
         print(f'File "{file}" does not exist.')
@@ -141,13 +161,14 @@ def read_json(file):
         try:
             return json.load(open(input_file))
         except Exception as e:
-            print("Exception occurred during data import:", e)
+            print("Exception occurred while trying to read file:", e)
             quit()
 
 def write_to_json(data):
     name = data["character"]["name"]
     filename = name.replace(" ", "") + ".json"
     output_file = os.path.join(output_folder, filename)
+
     try:
         if not os.path.exists(output_folder):
             os.makedirs(output_folder)

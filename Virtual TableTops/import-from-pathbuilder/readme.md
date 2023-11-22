@@ -19,7 +19,7 @@ Developing a script to parse a json export from [Pathbuilder](https://pathbuilde
 - [ ] armor class
 - [ ] saving throws
 - [ ] skills
-- [ ] hit points
+- [x] hit points    <small>*(minor to-dos left)*</small>
 - [ ] perception
 
 #### To do - "repeating" sections:
