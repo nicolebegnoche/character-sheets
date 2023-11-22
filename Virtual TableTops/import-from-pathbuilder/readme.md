@@ -6,6 +6,7 @@ Developing a script to parse a json export from [Pathbuilder](https://pathbuilde
 🗸 &nbsp; imports basic text fields <sub>(name, ancestry, deity, class, background, size, alignment, level, languages, age, gender)</sub>
 🗸 &nbsp; imports ability scores
 
+🗸 &nbsp; class dc
 ---
 #### unexpected to-do:  
 - [ ] write script to combine data from stat block export and json export [(details)](input/export_from_pathbuilder/readme.md)
@@ -13,14 +14,13 @@ Developing a script to parse a json export from [Pathbuilder](https://pathbuilde
 ---
 
 #### To do - requires coordinating and calculating multiple fields:
-- [ ] class dc
-- [ ] speed
-- [ ] weapon proficiencies
-- [ ] armor class
-- [ ] saving throws
-- [ ] skills
-- [x] hit points    <small>*(minor to-dos left)*</small>
 - [ ] perception
+- [ ] saving throws
+- [ ] armor class
+- [ ] skills
+- [ ] weapon proficiencies
+- [x] speed         <small>*(1 to-do; need stat block version)*</small>
+- [x] hit points    <small>*(2 to-dos; need stat block version)*</small>
 
 #### To do - "repeating" sections:
 - [ ] lores

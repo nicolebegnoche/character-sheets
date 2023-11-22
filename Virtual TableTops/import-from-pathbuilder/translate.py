@@ -63,20 +63,16 @@ def main():
     character.add(scores := ability_scores())
     modifiers = dict(zip(abilities.keys(), [y for x, y in scores if 'mod' in x]))
 
-    # simple values that require minimal work to import
     character.add(basics())
-    # character.add(speed())
-
-    # combine ancestry and heritage without duplicating or omitting ancestry
     character.add(heritage())
-
-    character.add(class_dc(modifiers))
+    character.add(speed())
     character.add(hit_points(modifiers['con']))
-    # character.add(armor_class(scores['dex']))
-    # character.add(saving_throws(scores))
-    # character.add(skills(scores))
-    # character.add(weapon_proficiencies())
-    # character.add(perception())
+    character.add(class_dc(modifiers))
+    # character.add(armor_class(modifiers['dex']))
+    # character.add(saving_throws(modifiers))
+    # character.add(skills(modifiers))
+    # character.add(weapon_proficiencies(modifiers))
+    # character.add(perception(modifiers))
 
     # write to file
     character.export()
@@ -110,6 +106,8 @@ def basics():
 
     matching_names = ['age', 'alignment', 'background', 'class', 'deity', 'level']
     keys = [[x, data[x]] for x in matching_names]
+
+    # TODO: possibly break down speed into base + bonus with a note explaining where the bonus comes from 
 
     keys.extend(
         [
@@ -177,6 +175,15 @@ def hit_points(con):
     ]
 
 
+def speed():
+    """Calculate speed"""
+
+    # TODO: separate speed into base + bonus with note explaining where they come from
+    #       keys are  speed_status_bonus, speed_item_bonus, speed_circumstance_bonus, and speed_notes
+    #       for each bonus, there's another field of the same name for penalties
+    speed_total = data['attributes']['speed'] + data['attributes']['speedBonus']
+    return [['speed_base', speed_total]]
+
 def read_json(file):
     if not os.path.exists(file):
         print(f'File \'{file}\' does not exist.')
@@ -187,7 +194,6 @@ def read_json(file):
         except Exception as e:
             print('Exception occurred while trying to read file:', e)
             quit()
-
 
 def write_to_json(data):
     name = data['character']['name']
